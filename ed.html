@@ -43,29 +43,38 @@
             width: 100%;
             bottom: 0;
         }
-        
         .circle-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 20px 0;
         }
-
         .circle-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-color: #ccc; 
+            background-color: #ccc;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
         }
-
         .circle-image img {
             width: 100%;
-            height: 110%;
+            height: 100%;
             object-fit: cover;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -75,16 +84,14 @@
     </header>
     <div class="circle-wrapper">
         <div class="circle-image">
-            <a href="h1.html" class="back-button"><img src="eds.jpg" alt="About Us Image"></a>
+            <a href="h1.html"><img src="eds.jpg" alt="Edgar's Image"></a>
         </div>
     </div>
     <div class="container">
         <h2>About Me</h2>
         <p>Hello! My name is <strong>Edgar A Dasmariñas</strong>. I enjoy playing games, coding, and going on nature trips.</p>
-        <p>I want to work as a programmer, and I am passionate about learning. Feel free to explore this page to learn more about me!</p>
-        <div class="button-container">
-            <a href="h1.html" class="back-button">Go Back</a>
-        </div>
+        <p>I aspire to work as a programmer and am passionate about continuous learning. Feel free to explore this page to learn more about me!</p>
+        <a href="h1.html" class="back-button">Go Back</a>
     </div>
     <footer>
         <p>© 2025 My Information. All rights reserved.</p>

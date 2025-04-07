@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: pages-build-deployment
 
 on:
   push:
@@ -8,29 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Set up Jekyll
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
+    # Ensure the `docs` directory exists
+    - name: Create docs directory
+      run: mkdir -p docs
+    
+    - name: Build Jekyll site
+      run: |
+        bundle install
+        bundle exec jekyll build
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
-      # Add this step to create the docs directory
-      - name: Create missing docs directory
-        run: mkdir -p /github/workspace/docs
-
-      - name: Build site
-        run: bundle exec jekyll build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site

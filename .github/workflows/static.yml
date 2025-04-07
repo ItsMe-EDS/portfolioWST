@@ -41,7 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-    sass:
-      sass_dir: style.css
-  style: compressed

@@ -3,65 +3,58 @@ body {
     margin: 1px;
     padding: 0%;
 }
-
+hr{
+    border: 2px solid black;
+    border-radius: 8px; 
+}
 header {
     background-color: #333;
     color: #fff;
     padding: 1em;
     text-align: center;
 }
-
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0%;
 }
-
 header nav ul li {
     display: inline-block;
     margin-right: 20px;
 }
-
 header nav a {
     color: antiquewhite;
     text-decoration: none;
 }
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em;
 }
-
 section {
     background-color: #f2f2f2;
     padding: 1em;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 h1 {
     color: #333;
     margin-top: 0;
 }
-
 p {
     margin: 20px;
 }
-
 iframe {
     width: 100%;
     height: 500px;
     border: none;
 }
-
 img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
-
 footer {
     background-color: #333;
     color: #fff;
@@ -69,11 +62,9 @@ footer {
     text-align: center;
     clear: both;
 }
-
 footer p {
     margin-bottom: 10px;
 }
-
 .circle-image {
     width: 150px;
     height: 150px;
@@ -85,28 +76,23 @@ footer p {
     overflow: hidden;
     position: relative;
 }
-
 .circle-image img {
     width: 150%;
     height: 150%;
     object-fit: cover;
 }
-
 .nav-links {
     position: absolute;
     width: 50%;
     height: 100%;
     cursor: pointer;
 }
-
 .nav-left {
     left: 0;
 }
-
 .nav-right {
     right: 0;
 }
-
 .info-section {
     margin-top: 50px;
     padding: 20px;
@@ -119,7 +105,6 @@ footer p {
     max-width: 800px;
     min-height: 300px;
 }
-
 .blog-section {
     margin-top: 50px;
     padding: 20px;
@@ -132,7 +117,6 @@ footer p {
     max-width: 800px;
     min-height: 300px;
 }
-
 #contact {
     margin-top: 50px;
     padding: 20px;
@@ -145,22 +129,18 @@ footer p {
     max-width: 800px;
     min-height: 300px;
 }
-
 .blog-section hr {
     border: 0;
     height: 1px;
     background: #ccc;
     margin: 20px 0;
 }
-
 .person1-image {
     margin-bottom: 15px;
 }
-
 .person2-image {
     margin-bottom: 15px;
 }
-
 .person1-image img {
     width: 150px;
     height: 150px;
@@ -168,7 +148,6 @@ footer p {
     object-fit: cover;
     border: 2px solid #333;
 }
-
 .person2-image img {
     width: 150px;
     height: 150px;
@@ -176,17 +155,32 @@ footer p {
     object-fit: cover;
     border: 2px solid #333;
 }
-
+.skills {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.skill {
+    margin: 0 15px;
+    text-align: center; 
+}
+.skill img {
+    width: 70px;
+    height: 50px; 
+    margin-bottom: 5px; 
+}
+.skill p {
+    font-size: 1em; 
+    color: #333;
+}
 aside ul {
     list-style-type: none;
     padding: 0;
 }
-
 aside ul li {
     font-size: 1.2em;
     margin: 10px 0;
 }
-
 #about {
     text-align: center;
     padding: 20px;
@@ -195,7 +189,6 @@ aside ul li {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 #about img {
     width: 200px;
     height: 200px;
@@ -204,39 +197,32 @@ aside ul li {
     border: 2px solid #333;
     margin: 20px 0;
 }
-
 area {
     cursor: pointer;
 }
-
 #about h1 {
     color: #333;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
-
 #about p {
     color: #666;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
-
 @media screen and (max-width: 768px) {
     .circle-image {
         width: 120px;
         height: 120px;
     }
-
     .info-section,
     .blog-section {
         padding: 10px;
     }
-
     nav ul {
         flex-direction: column;
         text-align: center;
     }
-
     iframe {
         width: 100%;
         height: 400px;

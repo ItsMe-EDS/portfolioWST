@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy static content to Pages
 
 on:
   push:
@@ -23,25 +23,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # ^ This gets your website's code from GitHub
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2.2'  # IMPORTANT: Use the Ruby version your Jekyll site needs
-          bundler-cache: true    # This makes it faster
-        # ^ This installs Ruby
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        # ^ This configures GitHub Pages
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
-        # ^ This runs Jekyll to build your website
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site  # Jekyll puts the built site here
-        # ^ This prepares the built website for upload
+          path: .  # Upload everything from the root of the repository
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # ^ This uploads your built website to GitHub Pages
